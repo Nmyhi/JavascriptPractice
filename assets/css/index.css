@@ -1,3 +1,27 @@
-h1 {
-    color: brown;
+#display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 1rem;
+    background-color: red;
+    height: 15vh;
+}
+
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 5fr);
+    gap: 1rem;
+}
+
+.button {
+    background-color: blue;
+    width: 10;
+    height: 12vh
+}
+
+#equals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 1rem;
+    background-color: red;
+    height: 15vh;
 }
