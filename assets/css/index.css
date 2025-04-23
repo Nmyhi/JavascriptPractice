@@ -1,9 +1,17 @@
+body {
+    background-color: azure;
+}
+
 #display {
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     gap: 1rem;
-    background-color: red;
+    background-color: teal;
     height: 15vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: grey;
 }
 
 #buttons {
@@ -13,15 +21,24 @@
 }
 
 .button {
+    display: grid;
     background-color: blue;
     width: 10;
-    height: 12vh
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: grey;
 }
 
 #equals {
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     gap: 1rem;
-    background-color: red;
+    background-color: teal;
     height: 15vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: grey;
 }
