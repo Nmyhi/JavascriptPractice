@@ -3,11 +3,13 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     for (let i = 0; i < 20; i++) {
         let div = document.createElement("div");
-        div.classList.add("button")
+        div.classList.add("button");
         document.getElementById("buttons").appendChild(div);
       };
       appendSymbols();
+      appendEventlisteners();
   });
+
 
 //Function for appending the symbols to the buttons
 function appendSymbols() {
@@ -23,4 +25,14 @@ function appendSymbols() {
         p.innerText = calcSymbols[i];
         buttons[i].appendChild(p);
     }
+};
+
+function appendEventlisteners() {
+    let buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            let symbol = button.getAttribute("data-symbol");
+            console.log("Clicked:", symbol);
+        });
+    });
 };
