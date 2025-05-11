@@ -1,48 +1,103 @@
+/* General Styles */
 body {
-    background-color: azure;
-}
-
-#display {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    gap: 1rem;
-    background-color: teal;
-    height: 15vh;
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: grey;
+    height: 100vh;
+    margin: 0;
 }
 
+#main-container {
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 320px;
+}
+
+/* Display */
+#display {
+    background-color: #2d4059;
+    padding: 20px;
+    color: #fff;
+    text-align: right;
+    font-size: 2.5rem;
+    height: 80px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#display-text {
+    margin: 0;
+    word-break: break-all;
+}
+
+/* Buttons container */
 #buttons {
     display: grid;
-    grid-template-columns: repeat(4, 5fr);
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 10px;
 }
 
+/* Individual buttons */
 .button {
-    display: grid;
-    background-color: blue;
-    width: 100%; /* use full width */
-    height: 12vh;
+    background-color: #dde1e7;
+    color: #333;
+    font-size: 1.5rem;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: grey;
-    cursor: pointer; /* nicer cursor */
-    user-select: none; /* prevent text selection */
+    transition: all 0.2s ease;
+    user-select: none;
 }
 
+.button:hover {
+    background-color: #b3bdcb;
+    transform: translateY(-3px);
+}
+
+.button:active {
+    background-color: #9daab8;
+    transform: translateY(0);
+}
+
+/* Equals button */
 #equals {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    gap: 1rem;
-    background-color: teal;
-    height: 15vh;
+    background-color: #ea5455;
+    color: white;
+    font-size: 2rem;
+    height: 60px;
+    margin: 0 10px 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: grey;
-    cursor: pointer; /* nicer cursor */
-    user-select: none; /* prevent text selection */
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+#equals:hover {
+    background-color: #d43f3f;
+    transform: translateY(-3px);
+}
+
+#equals:active {
+    background-color: #bf3a3a;
+    transform: translateY(0);
+}
+
+/* Disabled Button */
+.disabled {
+    background-color: #aab0b6;
+    opacity: 0.5;
+    pointer-events: none;
 }

@@ -27,6 +27,14 @@ function appendSymbols() {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].setAttribute("data-symbol", `${calcSymbols[i]}`);
     };
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute("data-symbol", calcSymbols[i]);
+        if(calcSymbols[i] === "n/a"){
+            buttons[i].classList.add("disabled");
+            buttons[i].style.pointerEvents = "none";
+            buttons[i].style.opacity = "0.5";
+        }
+    };
     // Adding a <P> symbol shild to each div corresponding with the indexes to "Draw" the layout
     for (let i = 0; i < buttons.length; i++) {
         let p = document.createElement("p");
