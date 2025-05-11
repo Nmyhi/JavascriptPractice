@@ -23,12 +23,14 @@ body {
 .button {
     display: grid;
     background-color: blue;
-    width: 10;
+    width: 100%; /* use full width */
     height: 12vh;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     color: grey;
+    cursor: pointer; /* nicer cursor */
+    user-select: none; /* prevent text selection */
 }
 
 #equals {
@@ -41,4 +43,6 @@ body {
     align-items: center;
     font-size: 2rem;
     color: grey;
+    cursor: pointer; /* nicer cursor */
+    user-select: none; /* prevent text selection */
 }
